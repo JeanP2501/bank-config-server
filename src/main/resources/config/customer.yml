@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: customer
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/bankdb
+      database: bankdb
+
+logging:
+  level:
+    root: INFO
+    com.bank: DEBUG
+    org.springframework.data.mongodb: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
